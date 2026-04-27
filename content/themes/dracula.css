@@ -1,0 +1,51 @@
+/* ============================================================
+   Gemini UI Enhancer — Dracula Theme
+   Only container backgrounds + code — no broad element overrides
+   ============================================================ */
+
+body.gue-theme-dracula {
+  background-color: #282a36 !important;
+  color: #f8f8f2 !important;
+}
+
+body.gue-theme-dracula header, body.gue-theme-dracula [role="banner"] {
+  background-color: #282a36 !important;
+  color: #f8f8f2 !important;
+}
+
+body.gue-theme-dracula nav, body.gue-theme-dracula [role="navigation"], body.gue-theme-dracula aside {
+  background-color: #1e1f29 !important;
+  color: #c0c0c0 !important;
+}
+
+body.gue-theme-dracula main, body.gue-theme-dracula [role="main"] {
+  background-color: #282a36 !important;
+  color: #f8f8f2 !important;
+}
+
+body.gue-theme-dracula pre {
+  background-color: #1e1f29 !important;
+  border: 1px solid rgba(189,147,249,0.1) !important;
+}
+body.gue-theme-dracula code { color: #f8f8f2 !important; }
+body.gue-theme-dracula :not(pre) > code {
+  background-color: rgba(189,147,249,0.1) !important;
+  color: #ff79c6 !important;
+}
+
+body.gue-theme-dracula fieldset {
+  background-color: #21222c !important;
+  border-color: rgba(189,147,249,0.1) !important;
+}
+
+body.gue-theme-dracula ::-webkit-scrollbar-thumb { background: rgba(189,147,249,0.2) !important; }
+
+body.gue-theme-dracula [role="dialog"], body.gue-theme-dracula [role="menu"] {
+  background-color: #21222c !important;
+  color: #f8f8f2 !important;
+}
+
+body.gue-theme-dracula ::selection {
+  background-color: rgba(189,147,249,0.3) !important;
+  color: #fff !important;
+}

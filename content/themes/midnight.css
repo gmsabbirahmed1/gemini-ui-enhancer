@@ -1,0 +1,77 @@
+/* ============================================================
+   Gemini UI Enhancer — Midnight Theme
+   Deep dark — ONLY colors, ONLY on content that needs it
+   Uses Gemini's own dark mode structure, not broad overrides
+   ============================================================ */
+
+/* ---- Page background ---- */
+body.gue-theme-midnight {
+  background-color: #0c1120 !important;
+  color: #f0f4f8 !important;
+}
+
+/* ---- Header ---- */
+body.gue-theme-midnight header,
+body.gue-theme-midnight [role="banner"] {
+  background-color: #0c1120 !important;
+  color: #f0f4f8 !important;
+}
+
+/* ---- Sidebar ---- */
+body.gue-theme-midnight nav,
+body.gue-theme-midnight [role="navigation"],
+body.gue-theme-midnight aside {
+  background-color: #0b1020 !important;
+  color: #c0cfe0 !important;
+}
+
+/* ---- Main content area ---- */
+body.gue-theme-midnight main,
+body.gue-theme-midnight [role="main"] {
+  background-color: #0c1120 !important;
+  color: #f0f4f8 !important;
+}
+
+/* ---- Code blocks ---- */
+body.gue-theme-midnight pre {
+  background-color: #0a1018 !important;
+  border: 1px solid rgba(80, 140, 240, 0.1) !important;
+}
+
+body.gue-theme-midnight code {
+  color: #e8edf5 !important;
+}
+
+body.gue-theme-midnight :not(pre) > code {
+  background-color: rgba(80, 140, 240, 0.1) !important;
+  color: #7cb8ff !important;
+}
+
+/* ---- Input area ---- */
+body.gue-theme-midnight fieldset {
+  background-color: #131b2e !important;
+  border-color: rgba(80, 140, 240, 0.12) !important;
+}
+
+/* ---- Scrollbar ---- */
+body.gue-theme-midnight ::-webkit-scrollbar-thumb {
+  background: rgba(80, 140, 240, 0.2) !important;
+}
+
+body.gue-theme-midnight ::-webkit-scrollbar-thumb:hover {
+  background: rgba(80, 140, 240, 0.35) !important;
+}
+
+/* ---- Dialogs & menus ---- */
+body.gue-theme-midnight [role="dialog"],
+body.gue-theme-midnight [role="menu"],
+body.gue-theme-midnight [role="listbox"] {
+  background-color: #131b2e !important;
+  color: #f0f4f8 !important;
+}
+
+/* ---- Selection ---- */
+body.gue-theme-midnight ::selection {
+  background-color: rgba(80, 140, 240, 0.3) !important;
+  color: #fff !important;
+}

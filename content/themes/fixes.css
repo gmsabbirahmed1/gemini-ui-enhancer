@@ -1,0 +1,188 @@
+/* ============================================================
+   Gemini UI Enhancer — Core CSS Fixes
+   MINIMAL approach: only fix what's actually broken.
+   DO NOT override Gemini's layout, positioning, or spacing.
+   ============================================================ */
+
+/* ---- Import Premium Fonts ---- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* ============================================================
+   1. SIDEBAR GPU ACCELERATION
+   Prevent sidebar from janky rendering
+   ============================================================ */
+
+nav[class],
+[role="navigation"],
+aside {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* ============================================================
+   1b. INPUT AREA OVERLAP FIX
+   The input area is a sibling to infinite-scroller.chat-history
+   and overlays ~180px at the bottom. Add padding so content
+   can scroll fully past the input.
+   ============================================================ */
+
+infinite-scroller.chat-history {
+  padding-bottom: 200px !important;
+}
+
+/* ============================================================
+   2. TYPOGRAPHY — Inter font + better text rendering
+   ============================================================ */
+
+body.gue-enhanced {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  text-rendering: optimizeLegibility !important;
+}
+
+/* Font size scaling via CSS variable */
+body.gue-enhanced {
+  --gue-font-scale: 1;
+}
+
+/* Apply font scaling to response/message text */
+body.gue-enhanced [class*="response"] p,
+body.gue-enhanced [class*="response"] li,
+body.gue-enhanced [class*="response"] span,
+body.gue-enhanced [class*="response"] td,
+body.gue-enhanced [class*="message"] p,
+body.gue-enhanced [class*="message"] li,
+body.gue-enhanced [class*="message"] span,
+body.gue-enhanced .markdown p,
+body.gue-enhanced .markdown li,
+body.gue-enhanced .markdown span {
+  font-size: calc(1rem * var(--gue-font-scale, 1)) !important;
+}
+
+/* Apply font scaling to headings */
+body.gue-enhanced [class*="response"] h1,
+body.gue-enhanced [class*="message"] h1,
+body.gue-enhanced .markdown h1 {
+  font-size: calc(1.75rem * var(--gue-font-scale, 1)) !important;
+}
+
+body.gue-enhanced [class*="response"] h2,
+body.gue-enhanced [class*="message"] h2,
+body.gue-enhanced .markdown h2 {
+  font-size: calc(1.4rem * var(--gue-font-scale, 1)) !important;
+}
+
+body.gue-enhanced [class*="response"] h3,
+body.gue-enhanced [class*="message"] h3,
+body.gue-enhanced .markdown h3 {
+  font-size: calc(1.15rem * var(--gue-font-scale, 1)) !important;
+}
+
+/* Apply font scaling to code blocks */
+body.gue-enhanced pre,
+body.gue-enhanced code {
+  font-size: calc(0.85rem * var(--gue-font-scale, 1)) !important;
+}
+
+/* ============================================================
+   3. CODE BLOCKS — Better fonts and visuals
+   ============================================================ */
+
+body.gue-enhanced pre,
+body.gue-enhanced code,
+body.gue-enhanced [class*="code-block"],
+body.gue-enhanced .code-block {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'SF Mono', 'Consolas', monospace !important;
+  font-size: 13.5px !important;
+  line-height: 1.6 !important;
+  tab-size: 4 !important;
+  -moz-tab-size: 4 !important;
+}
+
+body.gue-enhanced pre {
+  border-radius: 12px !important;
+  overflow-x: auto !important;
+  scrollbar-width: thin !important;
+}
+
+body.gue-enhanced :not(pre) > code {
+  padding: 2px 6px !important;
+  border-radius: 5px !important;
+  font-size: 0.88em !important;
+}
+
+/* ============================================================
+   4. SCROLLBAR — Cleaner, thinner
+   ============================================================ */
+
+body.gue-enhanced ::-webkit-scrollbar {
+  width: 7px !important;
+  height: 7px !important;
+}
+
+body.gue-enhanced ::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+body.gue-enhanced ::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.3) !important;
+  border-radius: 10px !important;
+}
+
+body.gue-enhanced ::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 128, 0.5) !important;
+}
+
+/* ============================================================
+   5. SMOOTH ANIMATIONS
+   ============================================================ */
+
+body.gue-enhanced [class*="response-container"],
+body.gue-enhanced [class*="model-response"] {
+  animation: gue-fadeIn 0.3s ease-out;
+}
+
+@keyframes gue-fadeIn {
+  from { opacity: 0.6; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   6. WIDE MODE — override max-width on ALL inner containers
+   The scroll container is full width; it's the children that
+   have max-width constraints (typically 768px or similar).
+   ============================================================ */
+
+body.gue-wide-mode infinite-scroller > *,
+body.gue-wide-mode .chat-history > *,
+body.gue-wide-mode infinite-scroller > * > *,
+body.gue-wide-mode .chat-history > * > * {
+  max-width: 95vw !important;
+  width: 95% !important;
+}
+
+/* Also widen the input area wrapper */
+body.gue-wide-mode .input-area-container,
+body.gue-wide-mode .input-area-container > * {
+  max-width: 95vw !important;
+  width: 95% !important;
+}
+
+/* ============================================================
+   7. SIDEBAR LOCK
+   ============================================================ */
+
+body.gue-sidebar-locked nav[class],
+body.gue-sidebar-locked [role="navigation"],
+body.gue-sidebar-locked aside:first-of-type {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+  position: relative !important;
+  min-width: 260px !important;
+  flex-shrink: 0 !important;
+}

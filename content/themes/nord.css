@@ -1,0 +1,51 @@
+/* ============================================================
+   Gemini UI Enhancer — Nord Theme
+   Only container backgrounds + code — no broad element overrides
+   ============================================================ */
+
+body.gue-theme-nord {
+  background-color: #2e3440 !important;
+  color: #eceff4 !important;
+}
+
+body.gue-theme-nord header, body.gue-theme-nord [role="banner"] {
+  background-color: #2e3440 !important;
+  color: #eceff4 !important;
+}
+
+body.gue-theme-nord nav, body.gue-theme-nord [role="navigation"], body.gue-theme-nord aside {
+  background-color: #272c36 !important;
+  color: #d8dee9 !important;
+}
+
+body.gue-theme-nord main, body.gue-theme-nord [role="main"] {
+  background-color: #2e3440 !important;
+  color: #eceff4 !important;
+}
+
+body.gue-theme-nord pre {
+  background-color: #242933 !important;
+  border: 1px solid rgba(136,192,208,0.1) !important;
+}
+body.gue-theme-nord code { color: #eceff4 !important; }
+body.gue-theme-nord :not(pre) > code {
+  background-color: rgba(136,192,208,0.1) !important;
+  color: #88c0d0 !important;
+}
+
+body.gue-theme-nord fieldset {
+  background-color: #272c36 !important;
+  border-color: rgba(136,192,208,0.1) !important;
+}
+
+body.gue-theme-nord ::-webkit-scrollbar-thumb { background: rgba(136,192,208,0.2) !important; }
+
+body.gue-theme-nord [role="dialog"], body.gue-theme-nord [role="menu"] {
+  background-color: #272c36 !important;
+  color: #eceff4 !important;
+}
+
+body.gue-theme-nord ::selection {
+  background-color: rgba(136,192,208,0.3) !important;
+  color: #fff !important;
+}

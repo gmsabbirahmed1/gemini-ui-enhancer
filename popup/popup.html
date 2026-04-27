@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemini UI Enhancer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <div class="popup-header">
+      <div class="header-left">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" 
+                  fill="url(#starGrad)" stroke="none"/>
+            <defs>
+              <linearGradient id="starGrad" x1="2" y1="2" x2="22" y2="22">
+                <stop offset="0%" stop-color="#60a5fa"/>
+                <stop offset="50%" stop-color="#a78bfa"/>
+                <stop offset="100%" stop-color="#f472b6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="header-text">
+          <h1>Gemini UI Enhancer</h1>
+          <span class="version">v1.0.0</span>
+        </div>
+      </div>
+      <label class="master-toggle" id="masterToggleLabel">
+        <input type="checkbox" id="masterToggle" checked>
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+
+    <!-- Status bar -->
+    <div class="status-bar" id="statusBar">
+      <span class="status-dot active"></span>
+      <span class="status-text">Active on Gemini</span>
+    </div>
+
+    <!-- Theme Section -->
+    <div class="section">
+      <div class="section-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+        Theme
+      </div>
+      <div class="theme-grid">
+        <button class="theme-btn active" data-theme="default" id="themeDefault">
+          <div class="theme-preview default-preview">
+            <div class="preview-bar"></div>
+            <div class="preview-content"><div class="preview-line"></div><div class="preview-line short"></div></div>
+          </div>
+          <span>Default</span>
+        </button>
+        <button class="theme-btn" data-theme="midnight" id="themeMidnight">
+          <div class="theme-preview midnight-preview">
+            <div class="preview-bar"></div>
+            <div class="preview-content"><div class="preview-line"></div><div class="preview-line short"></div></div>
+          </div>
+          <span>Midnight</span>
+        </button>
+        <button class="theme-btn" data-theme="dracula" id="themeDracula">
+          <div class="theme-preview dracula-preview">
+            <div class="preview-bar"></div>
+            <div class="preview-content"><div class="preview-line"></div><div class="preview-line short"></div></div>
+          </div>
+          <span>Dracula</span>
+        </button>
+        <button class="theme-btn" data-theme="nord" id="themeNord">
+          <div class="theme-preview nord-preview">
+            <div class="preview-bar"></div>
+            <div class="preview-content"><div class="preview-line"></div><div class="preview-line short"></div></div>
+          </div>
+          <span>Nord</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Layout Section -->
+    <div class="section">
+      <div class="section-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/>
+        </svg>
+        Layout
+      </div>
+      <div class="toggle-row">
+        <div class="toggle-info">
+          <span class="toggle-label">Wide Mode</span>
+          <span class="toggle-desc">Expand chat to use more screen space</span>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="wideMode">
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+      <div class="toggle-row">
+        <div class="toggle-info">
+          <span class="toggle-label">Lock Sidebar</span>
+          <span class="toggle-desc">Keep sidebar always visible</span>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="sidebarLock">
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Typography Section -->
+    <div class="section">
+      <div class="section-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/>
+        </svg>
+        Typography
+      </div>
+      <div class="toggle-row">
+        <div class="toggle-info">
+          <span class="toggle-label">Premium Fonts</span>
+          <span class="toggle-desc">Inter + JetBrains Mono</span>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="enhancedFonts" checked>
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+      <div class="slider-row">
+        <div class="slider-header">
+          <span class="toggle-label">Font Size</span>
+          <span class="slider-value" id="fontSizeValue">100%</span>
+        </div>
+        <input type="range" id="fontSize" min="80" max="130" value="100" step="5" class="slider">
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="popup-footer">
+      <button class="reset-btn" id="resetBtn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>
+        </svg>
+        Reset All
+      </button>
+      <span class="footer-text">Made with ♥ for Gemini</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
