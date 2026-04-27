@@ -67,15 +67,13 @@ Since this extension is open-source and currently hosted on GitHub, you can inst
 
 ## 📸 Screenshots
 
-*(To the author: Replace these placeholder URLs with paths to actual images in a `screenshots/` folder before publishing!)*
-
-| Midnight Theme | Dracula Theme |
+| Dracula Theme in Action | Extension Settings |
 | :---: | :---: |
-| <img src="https://via.placeholder.com/400x250.png?text=Midnight+Theme" width="400"> | <img src="https://via.placeholder.com/400x250.png?text=Dracula+Theme" width="400"> |
+| <img src="screenshots/1.png" alt="Dracula Theme" width="400"> | <img src="screenshots/2.png" alt="Settings Popup" width="400"> |
 
-| Nord Theme | Wide Mode in Action |
+| Dracula Theme Selected | Midnight Theme Selected |
 | :---: | :---: |
-| <img src="https://via.placeholder.com/400x250.png?text=Nord+Theme" width="400"> | <img src="https://via.placeholder.com/400x250.png?text=Wide+Mode" width="400"> |
+| <img src="screenshots/3.png" alt="Dracula Settings" width="400"> | <img src="screenshots/4.png" alt="Midnight Settings" width="400"> |
 
 ---
 
@@ -94,6 +92,12 @@ This extension is **100% private**. It does not collect, store, or transmit any 
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome! 
 Feel free to check [issues page](https://github.com/gmsabbirahmed1/gemini-ui-enhancer/issues).
+
+---
+
+## 📧 Contact
+For any inquiries or feedback, feel free to reach out:
+**Email:** gmsabbirahmed1@gmail.com
 
 ---
 
