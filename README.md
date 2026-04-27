@@ -67,13 +67,7 @@ Since this extension is open-source and currently hosted on GitHub, you can inst
 
 ## 📸 Screenshots
 
-| Dracula Theme in Action | Extension Settings |
-| :---: | :---: |
-| <img src="screenshots/1.png" alt="Dracula Theme" width="400"> | <img src="screenshots/2.png" alt="Settings Popup" width="400"> |
-
-| Dracula Theme Selected | Midnight Theme Selected |
-| :---: | :---: |
-| <img src="screenshots/3.png" alt="Dracula Settings" width="400"> | <img src="screenshots/4.png" alt="Midnight Settings" width="400"> |
+*Coming Soon...*
 
 ---
 
