@@ -1,97 +1,102 @@
 # ✨ Gemini UI Enhancer
 
-A Chrome/Chromium browser extension that fixes CSS rendering issues and enhances the Google Gemini UI with premium themes, wider layouts, better code blocks, and more.
+<div align="center">
+  <img src="icons/icon128.png" alt="Gemini UI Enhancer Logo" width="128">
+  <p><b>A premium, lightweight extension to supercharge your Google Gemini experience.</b></p>
 
-![Version](https://img.shields.io/badge/version-1.0.0-6366f1)
-![Chrome](https://img.shields.io/badge/Chrome-MV3-4285F4)
-![Brave](https://img.shields.io/badge/Brave-Compatible-FB542B)
-
-## 🚀 Features
-
-### CSS Fixes
-- **Sidebar stability** — Prevents unexpected sidebar collapses and rendering failures
-- **Layout responsiveness** — Fixes CSS issues at various viewport sizes
-- **Content width optimization** — Wider chat area for better readability
-- **Input area consistency** — Ensures the prompt area renders correctly
-
-### Premium Themes
-- 🌑 **Default** — Gemini's native look with fixes applied
-- 🌃 **Midnight** — Deep dark theme with electric blue accents
-- 🧛 **Dracula** — Classic developer-friendly dark palette
-- 🏔️ **Nord** — Calm, cool-toned arctic-inspired theme
-
-### UI Enhancements
-- **JetBrains Mono** for code blocks — premium monospace font
-- **Inter** for UI text — modern, readable sans-serif
-- **Custom scrollbar** — Sleek, theme-matched scrollbar styling
-- **Smooth animations** — Subtle transitions for messages and interactions
-- **Wide mode** — Expand chat to use more screen space
-- **Sidebar lock** — Keep sidebar always visible
-- **Font size control** — Adjustable text size slider (80% – 130%)
-
-## 📦 Installation
-
-### From Source (Developer Mode)
-
-1. Clone or download this repository
-2. Generate icons (if not already present):
-   ```bash
-   python3 generate_icons.py
-   ```
-3. Open your browser's extension management page:
-   - **Chrome**: `chrome://extensions`
-   - **Brave**: `brave://extensions`
-   - **Edge**: `edge://extensions`
-4. Enable **Developer mode** (toggle in top-right)
-5. Click **Load unpacked**
-6. Select the `gemini-ui-enhancer` folder
-7. Navigate to [gemini.google.com](https://gemini.google.com) and enjoy!
-
-## 🎛️ Usage
-
-1. Click the extension icon in your browser toolbar
-2. Use the **master toggle** to enable/disable the extension
-3. Select a **theme** from the theme grid
-4. Toggle **Wide Mode**, **Sidebar Lock**, or **Premium Fonts**
-5. Adjust the **Font Size** slider to your preference
-6. All settings are saved automatically and sync across devices
-
-## 🗂️ Project Structure
-
-```
-gemini-ui-enhancer/
-├── manifest.json          # Extension manifest (MV3)
-├── popup/
-│   ├── popup.html         # Extension popup UI
-│   ├── popup.css          # Popup styling
-│   └── popup.js           # Settings logic
-├── content/
-│   ├── content.js         # Content script
-│   └── themes/
-│       ├── fixes.css      # Core CSS fixes (always applied)
-│       ├── midnight.css   # Midnight theme
-│       ├── dracula.css    # Dracula theme
-│       └── nord.css       # Nord theme
-├── icons/
-│   ├── icon16.png
-│   ├── icon48.png
-│   └── icon128.png
-├── generate_icons.py      # Icon generator script
-└── README.md
-```
-
-## 🛠️ Technical Details
-
-- **Manifest V3** — Uses the latest Chrome extension standard
-- **Chrome Storage Sync API** — Settings persist and sync across devices
-- **MutationObserver** — Re-applies enhancements when Gemini's SPA re-renders
-- **CSS Custom Properties** — Theme variables for easy customization
-- **No external dependencies** — Pure vanilla JS/CSS
-
-## 📄 License
-
-MIT License — Free to use, modify, and distribute.
+  [![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](https://github.com/gmsabbirahmed1/gemini-ui-enhancer)
+  [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
+  [![Browser](https://img.shields.io/badge/browser-Chrome%20%7C%20Brave%20%7C%20Edge-lightgrey.svg)](#)
+</div>
 
 ---
 
-Made with ♥ for Gemini users
+## 🌟 Overview
+
+**Gemini UI Enhancer** transforms the default Google Gemini interface into a highly polished, developer-friendly workspace. It removes annoying layout bugs (like the "Ask Gemini" box blocking your code), introduces beautiful developer-centric themes, and gives you granular control over your chat environment.
+
+<div align="center">
+  <!-- Place your main screenshot here, replace the placeholder link -->
+  <img src="https://via.placeholder.com/800x450.png?text=Showcase+Screenshot+Here" alt="Gemini UI Enhancer Showcase">
+</div>
+
+---
+
+## 🚀 Features
+
+🎨 **Premium Themes:**
+- **Midnight:** Deep, high-contrast dark mode with electric blue accents.
+- **Dracula:** Inspired by the famous Dracula theme for developers.
+- **Nord:** Arctic, calm, and elegant dark mode.
+*(All themes use zero layout-breaking overrides—just pure, beautiful color mapping).*
+
+📏 **Layout Fixes:**
+- **Code Block Unblocking:** Fixes the native bug where the input box hides the bottom of long code responses.
+- **Wide Mode Toggle:** Expand the chat interface to take up 95% of your screen width—perfect for reading massive code snippets or tables.
+- **Sidebar Lock:** Pin the sidebar so it stops auto-collapsing.
+
+🔤 **Typography & Polish:**
+- Uses **Inter** for beautiful, legible UI text.
+- Uses **JetBrains Mono** for all code blocks.
+- Real-time **Font Size Scaling** slider to make text as large or small as you need without breaking the UI.
+- Thinner, cleaner scrollbars and smooth fade-in animations.
+
+---
+
+## 🛠️ Installation (Free / Developer Mode)
+
+Since this extension is open-source and currently hosted on GitHub, you can install it on any Chromium browser (Chrome, Brave, Edge) 100% for free using Developer Mode.
+
+1. **Download the Code**
+   - Click the green `<> Code` button at the top of this repository and select **Download ZIP**.
+   - Extract the downloaded ZIP file to a folder on your computer.
+
+2. **Open Extension Settings**
+   - In your browser, type `chrome://extensions/` (or `brave://extensions/` / `edge://extensions/`) into the address bar and press Enter.
+
+3. **Enable Developer Mode**
+   - Turn on the **"Developer mode"** toggle switch in the top right corner.
+
+4. **Load the Extension**
+   - Click the **"Load unpacked"** button in the top left.
+   - Select the extracted `gemini-ui-enhancer` folder.
+
+🎉 **You're done!** Pin the extension to your toolbar, open [Google Gemini](https://gemini.google.com/), and click the extension icon to start customizing!
+
+---
+
+## 📸 Screenshots
+
+*(To the author: Replace these placeholder URLs with paths to actual images in a `screenshots/` folder before publishing!)*
+
+| Midnight Theme | Dracula Theme |
+| :---: | :---: |
+| <img src="https://via.placeholder.com/400x250.png?text=Midnight+Theme" width="400"> | <img src="https://via.placeholder.com/400x250.png?text=Dracula+Theme" width="400"> |
+
+| Nord Theme | Wide Mode in Action |
+| :---: | :---: |
+| <img src="https://via.placeholder.com/400x250.png?text=Nord+Theme" width="400"> | <img src="https://via.placeholder.com/400x250.png?text=Wide+Mode" width="400"> |
+
+---
+
+## 💻 Tech Stack
+- Vanilla JavaScript (Manifest V3)
+- HTML5 / Vanilla CSS
+- Zero external dependencies. Fast, lightweight, and completely private.
+
+---
+
+## 📜 Privacy & Security
+This extension is **100% private**. It does not collect, store, or transmit any user data. All settings are synced locally via Chrome's native storage API. No external scripts are injected.
+
+---
+
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome! 
+Feel free to check [issues page](https://github.com/gmsabbirahmed1/gemini-ui-enhancer/issues).
+
+---
+
+<div align="center">
+  Made with ❤️ by <a href="https://github.com/gmsabbirahmed1">Sabbir Ahmed</a>
+</div>
