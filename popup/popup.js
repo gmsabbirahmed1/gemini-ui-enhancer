@@ -35,7 +35,7 @@
   // Current settings (kept in sync)
   let currentSettings = { ...DEFAULT_SETTINGS };
 
-  // ---- Save a setting AND notify content script immediately ----
+  // Save a setting and notify content script immediately
   function saveSetting(key, value) {
     currentSettings[key] = value;
     // Save to storage
@@ -45,7 +45,7 @@
     });
   }
 
-  // ---- Send settings directly to the content script on the active Gemini tab ----
+  // Send settings directly to the content script on the active Gemini tab
   function notifyContentScript() {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       if (tabs[0] && tabs[0].url && tabs[0].url.includes('gemini.google.com')) {
@@ -63,7 +63,7 @@
     });
   }
 
-  // ---- Update UI from settings ----
+  // Update UI from settings
   function updateUI(settings) {
     currentSettings = { ...settings };
 
@@ -99,14 +99,14 @@
     els.fontSizeValue.textContent = `${settings.fontSize}%`;
   }
 
-  // ---- Load settings ----
+  // Load settings
   function loadSettings() {
     chrome.storage.sync.get(DEFAULT_SETTINGS, (settings) => {
       updateUI(settings);
     });
   }
 
-  // ---- Event Listeners ----
+  // Event Listeners
 
   // Master toggle
   els.masterToggle.addEventListener('change', (e) => {

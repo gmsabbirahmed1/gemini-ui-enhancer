@@ -1,7 +1,4 @@
-/* ============================================================
-   Gemini UI Enhancer — Popup Styles
-   Premium dark glassmorphism design
-   ============================================================ */
+/* Gemini UI Enhancer — Popup Styles */
 
 * {
   margin: 0;
@@ -22,7 +19,7 @@ body {
   padding: 0;
 }
 
-/* ---- Header ---- */
+/* Header */
 .popup-header {
   display: flex;
   align-items: center;
@@ -65,12 +62,12 @@ body {
   font-weight: 500;
 }
 
-/* ---- Master Toggle ---- */
+/* Master Toggle */
 .master-toggle {
   cursor: pointer;
 }
 
-/* ---- Status Bar ---- */
+/* Status Bar */
 .status-bar {
   display: flex;
   align-items: center;
@@ -110,7 +107,7 @@ body {
   animation: none;
 }
 
-/* ---- Sections ---- */
+/* Sections */
 .section {
   padding: 14px 18px;
   border-bottom: 1px solid rgba(99, 102, 241, 0.08);
@@ -132,7 +129,7 @@ body {
   opacity: 0.6;
 }
 
-/* ---- Theme Grid ---- */
+/* Theme Grid */
 .theme-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -216,7 +213,7 @@ body {
 .nord-preview .preview-bar { background: #272c36; }
 .nord-preview .preview-line { background: #3b4252; }
 
-/* ---- Toggle Rows ---- */
+/* Toggle Rows */
 .toggle-row {
   display: flex;
   align-items: center;
@@ -293,7 +290,7 @@ input:checked + .toggle-slider::before {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* ---- Slider ---- */
+/* Slider */
 .slider-row {
   padding: 8px 0 4px;
   border-top: 1px solid rgba(99, 102, 241, 0.06);
@@ -347,7 +344,7 @@ input:checked + .toggle-slider::before {
   transform: scale(0.95);
 }
 
-/* ---- Footer ---- */
+/* Footer */
 .popup-footer {
   display: flex;
   align-items: center;
@@ -383,7 +380,7 @@ input:checked + .toggle-slider::before {
   color: #475569;
 }
 
-/* ---- Disabled state ---- */
+/* Disabled state */
 .popup-container.disabled .section {
   opacity: 0.4;
   pointer-events: none;

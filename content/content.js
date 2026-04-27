@@ -27,7 +27,7 @@
   let currentThemeKey = null;
   let extensionValid = true;
 
-  // ---- Check if extension context is still valid ----
+  // Check if extension context is still valid
   function isContextValid() {
     try {
       chrome.runtime.getURL('');
@@ -38,7 +38,7 @@
     }
   }
 
-  // ---- Safe chrome.storage.sync.get wrapper ----
+  // Safe chrome.storage.sync.get wrapper
   function safeStorageGet(defaults, callback) {
     if (!isContextValid()) return;
     try {
@@ -49,7 +49,7 @@
     }
   }
 
-  // ---- Fetch and inject theme CSS as inline <style> ----
+  // Fetch and inject theme CSS as inline <style>
   async function injectThemeCSS(themeKey) {
     removeThemeCSS();
     currentThemeKey = themeKey;
@@ -88,7 +88,7 @@
     currentThemeKey = null;
   }
 
-  // ---- Apply all settings to the DOM ----
+  // Apply all settings to the DOM
   function applySettings(settings) {
     const body = document.body;
     if (!body) return;
@@ -134,14 +134,14 @@
     }
   }
 
-  // ---- Load settings and apply ----
+  // Load settings and apply
   function init() {
     safeStorageGet(DEFAULT_SETTINGS, (settings) => {
       applySettings(settings);
     });
   }
 
-  // ---- Listen for setting changes via storage ----
+  // Listen for setting changes via storage
   try {
     chrome.storage.onChanged.addListener((changes, area) => {
       if (area !== 'sync' || !extensionValid) return;
@@ -153,7 +153,7 @@
     extensionValid = false;
   }
 
-  // ---- Listen for direct messages from popup ----
+  // Listen for direct messages from popup
   try {
     chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       if (!extensionValid) return;
@@ -167,7 +167,7 @@
     extensionValid = false;
   }
 
-  // ---- MutationObserver: re-apply if Gemini SPA re-renders ----
+  // MutationObserver: re-apply if Gemini SPA re-renders
   const observer = new MutationObserver((mutations) => {
     if (!extensionValid) return;
     for (const mutation of mutations) {
